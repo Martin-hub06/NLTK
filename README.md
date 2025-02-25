@@ -1,3 +1,4 @@
+# Task 1: Tokenization (Words and Sentences)
 !pip install nltk
 
 import nltk
@@ -8,7 +9,7 @@ import string
 nltk.download('punkt')
 nltk.download('stopwords')
 
-# Task 1: Tokenization (Words and Sentences)
+
 text1 = """Natural Language Toolkit (NLTK) is one of the largest Python 
 libraries for performing various Natural Language Processing tasks. 
 From rudimentary tasks such as text pre-processing to tasks likes 
@@ -21,6 +22,7 @@ words = word_tokenize(text1)
 print("Tokenized Sentences:", sentences)
 print("\nTokenized Words:", words)
 
+# Task 2: Removing Stop Words
 !pip install nltk
 
 import nltk
@@ -30,7 +32,7 @@ from nltk.corpus import stopwords
 nltk.download('punkt')
 nltk.download('stopwords')
 
-# Task 2: Removing Stop Words
+
 text2 = """Natural Language Toolkit (NLTK) works as a powerful Python 
 library that a wide range of tools for Natural Language Processing 
 (NLP). From fundamental tasks like text pre-processing to more 
