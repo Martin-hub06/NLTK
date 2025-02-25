@@ -45,3 +45,23 @@ words = word_tokenize(text2)
 filtered_words = [word for word in words if word.lower() not in stop_words]
 
 print("Text without Stop Words:", " ".join(filtered_words))
+
+
+# Task 3: Convert to Lowercase and Remove Punctuation
+!pip install nltk
+
+import string
+
+
+text3 = """Let’s eat, Grandma!
+Grandma, Let’s eat!
+Silvia, Are you free tomorrow?
+Yes, I’m free on Saturday."""
+
+
+text3_lower = text3.lower()
+
+
+text3_clean = text3_lower.translate(str.maketrans("", "", string.punctuation))
+
+print("Lowercase and Punctuation Removed:\n", text3_clean)
