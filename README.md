@@ -88,7 +88,45 @@ accurately !!!
  So, can you clean this messy text & make it structured??? """
 
 
-cleaned_text = re.sub(r"[^a-zA-Z0-9\s]", "", text4)  # Keep only letters, numbers, and spaces
-cleaned_text = re.sub(r"\s+", " ", cleaned_text).strip()  # Remove extra whitespaces
+cleaned_text = re.sub(r"[^a-zA-Z0-9\s]", "", text4)  
+cleaned_text = re.sub(r"\s+", " ", cleaned_text).strip()  
 
 print("Cleaned Text:\n", cleaned_text)
+
+# Task 5: Stemming and Lemmatization
+!pip install nltk
+
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+
+nltk.download('punkt')
+nltk.download('wordnet')
+
+text5 = """The researchers are analyzing various datasets to study the effects 
+of automation. 
+They observed that automated systems perform tasks more 
+efficiently than humans. 
+Many industries have been adopting AI-driven solutions to improve 
+productivity. 
+Running complex algorithms helps in predicting future trends 
+accurately. 
+Several companies are investing in developing smarter and more 
+adaptive models. 
+Data scientists continuously refine their models to achieve better 
+performance. 
+The advancements in technology have transformed the way 
+businesses operate."""
+
+words = word_tokenize(text5)
+
+stemmer = PorterStemmer()
+lemmatizer = WordNetLemmatizer()
+
+stemmed_words = [stemmer.stem(word) for word in words]
+lemmatized_words = [lemmatizer.lemmatize(word) for word in words]
+
+print("Original Words:", words)
+print("\nStemmed Words:", stemmed_words)
+print("\nLemmatized Words:", lemmatized_words)
+
